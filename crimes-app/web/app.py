@@ -2,7 +2,9 @@ from flask import Flask, render_template
  
 app = Flask(__name__)
  
- 
+from routes.handlers import routes_bp
+app.register_blueprint(routes_bp)
+
 @app.route('/')
 def root():
 	return status()
