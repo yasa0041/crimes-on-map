@@ -1,0 +1,5 @@
+Case_ID,Date,Crime_Description,Location_Description,Geolocation,Zipcode,Rental_Price,Neighborhood_Score,Predicted_Rental_Price,Predicted_Neighborhood_Score
+1,03/04/2019,Arson,House,"(33.9328, -118.2621)",90061,2090,25,,
+2,03/05/2019,Murder,Store,"(33.9581, -118.2651)",90003,2047,50,,
+3,03/05/2019,Homicide,Church ,"(33.8773, -118.2867)",90248,2430,75,,
+4,03/06/2019,Theft,House ,"(33.9492, -118.2827)",90044,2116,80,,
