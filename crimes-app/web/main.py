@@ -7,6 +7,7 @@ import json
 #import routes
 from routes.handlers import routes_bp
 
+## Create App
 app = Flask(__name__)
 
 @app.route('/')
@@ -33,7 +34,7 @@ def createKafkaProducer():
     print("Created Kafka producer")
     return producer
 
-if __name__ == '__main__':
+def initialize(app):
 
     print("Setting Server Config")
     app.config['UPLOAD_FOLDER'] = './user-uploaded-csv'
@@ -49,4 +50,6 @@ if __name__ == '__main__':
     app.register_blueprint(routes_bp)
 
     print("Starting Server on 0.0.0.0")
-    app.run(debug=True, host='0.0.0.0')
+
+print("Initializing App")
+initialize(app)
