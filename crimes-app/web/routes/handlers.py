@@ -23,7 +23,7 @@ def addCrime():
 
 	filename = werkzeug.secure_filename(csv.filename)
 	csv.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-	return uploadCrimeRecord(filename)
+	return helper.uploadCrimeRecord(filename)
 
 @routes_bp.route('/map/<city>',  methods=['GET'])
 def show_crime_map(city):
@@ -31,15 +31,7 @@ def show_crime_map(city):
     if city is None or city == 'chicago':
         return render_template(city + '.html')
 
-
-def uploadCrimeRecord(filename):
-    df = pd.read_csv(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-    fields = app.config['DATA_COLS']
-    if sorted(fields) == sorted(list(df.columns)):
-        print('Uploading to Kafka topic:', app.config['KAFKA_TOPIC'])
-        df.apply(lambda x: app.config['KAFKA_PRODUCER'].send(app.config['KAFKA_TOPIC'] , value = x.to_dict()), axis=1)
-    else:
-        helper.remove_file(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-        return 'Incorrect Columns in the uploaded csv. The data fields of {} must match: {}'.format(filename, fields), 401
-    
-    return 'File uploaded successfully!'
+@routes_bp.route('/report', methods=['POST'])
+def report_single_crime():
+    print("Reported new Crime: " + str(request.form))
+    return helper.reportCrime(request.form.to_dict(flat=False))

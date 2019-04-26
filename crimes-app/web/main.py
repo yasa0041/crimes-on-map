@@ -3,6 +3,7 @@ from elasticsearch import helpers, Elasticsearch
 import elasticsearch
 from kafka import KafkaProducer
 import json
+import os
 
 #import routes
 from routes.handlers import routes_bp
@@ -34,6 +35,11 @@ def createKafkaProducer():
     print("Created Kafka producer")
     return producer
 
+def createUploadDirectory(directory):
+
+    if not os.path.exists(directory):
+        os.makedirs(directory)
+
 def initialize(app):
 
     print("Setting Server Config")
@@ -45,6 +51,8 @@ def initialize(app):
     app.config['DATA_COLS'] = getDataSchema(app.config['ELASTIC_INDEX'])
     app.config['KAFKA_PRODUCER'] = createKafkaProducer()
     app.config['KAFKA_TOPIC'] = 'crimes'
+
+    createUploadDirectory(app.config['UPLOAD_FOLDER'])
 
     print("Registering blueprints")
     app.register_blueprint(routes_bp)
