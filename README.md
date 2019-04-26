@@ -1,7 +1,7 @@
 # crimes-on-map
 
 Hosted url: http://theta-anchor-215617.appspot.com/map/chicago
-`
+
 To deploy the app:
 
 cd crimes-app/web/
