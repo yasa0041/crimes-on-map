@@ -35,3 +35,7 @@ def show_crime_map(city):
 def report_single_crime():
     print("Reported new Crime: " + str(request.form))
     return helper.reportCrime(request.form.to_dict(flat=False))
+
+@routes_bp.route('/report', methods=['GET'])
+def report_form():
+    return render_template('report.html')
