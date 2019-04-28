@@ -46,10 +46,12 @@ width:50%;
                 placeholder="What do you want to report">
     </div>
     <div style="visibility:hidden; height:0px">
-            <input name="geoloc" type="text" class="form-control" name="Geolocation">
+            <input id="geoloc" name="Geolocation" type="text" class="form-control" name="Geolocation">
     </div>
 </br>
     <button name="submit-button" id="submit-button" type="button" class="btn btn-primary" onclick="getLocation()">Submit</button>
+    <iframe id="live-map" src="http://34.73.60.209:5601/app/kibana#/visualize/edit/9bd77760-5263-11e9-8392-9d770e73c5dd?embed=true&_g=()&_a=(filters:!(),linked:!f,query:(language:lucene,query:''),uiState:(mapCenter:!(41.880297681402865,-87.69081115722656),mapZoom:10),vis:(aggs:!((enabled:!t,id:'1',params:(),schema:metric,type:count),(enabled:!t,id:'2',params:(autoPrecision:!t,field:Location,isFilteredByCollar:!t,mapBounds:(bottom_right:(lat:44.96479793033104,lon:-65.8905029296875),top_left:(lat:47.58764167941513,lon:-70.9716796875)),mapCenter:(lat:46.29381556233369,lon:-68.43383789062501),mapZoom:8,precision:5,useGeocentroid:!t),schema:segment,type:geohash_grid)),params:(addTooltip:!t,colorSchema:'Yellow+to+Red',heatClusterSize:1.5,isDesaturated:!t,legendPosition:bottomright,mapCenter:!(0,0),mapType:'Scaled+Circle+Markers',mapZoom:2,wms:(enabled:!f,options:(format:image%2Fpng,transparent:!t),selectedTmsLayer:(attribution:'%3Cp%3E%26%23169;+%3Ca+href%3D%22http:%2F%2Fwww.openstreetmap.org%2Fcopyright%22%3EOpenStreetMap%3C%2Fa%3E+contributors+%7C+%3Ca+href%3D%22https:%2F%2Fwww.elastic.co%2Felastic-maps-service%22%3EElastic+Maps+Service%3C%2Fa%3E%3C%2Fp%3E%26%2310;',id:road_map,maxZoom:18,minZoom:0,origin:elastic_maps_service))),title:CrimesCountOnMap,type:tile_map))" height="600" width="800"></iframe>
+
 </form>
 
 <script>

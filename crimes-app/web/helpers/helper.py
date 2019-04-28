@@ -8,13 +8,9 @@ def remove_file(filename):
     print("Deleted file {}", filename)
 
 def reportCrime(record):
-    # city = record['city']
-    # crime_type = record['type']
-    # latlong = record['latlong']
-    # location_desc = record['loc_desc']
-    # crime_desc = record['crime_desc']
-    #'Case_ID', 'Crime_Description', 'Date', 'Geolocation', 'Location_Description', 'Neighborhood_Score', 'Predicted_Neighborhood_Score', 'Predicted_Rental_Price', 'Rental_Price', 'Zipcode'
-    print(record)
+    #Flatten dict
+    record = {k:v[0] for k,v in record.items()}
+
     record['Date'] = datetime.now().strftime('%m/%d/%Y %I:%M:%S %p')
     record['Case_ID'] = str(record['City'])+str(record['Date'])
     return uploaSingleRecord(record)
@@ -32,5 +28,6 @@ def uploadCrimeRecord(filename):
     return 'File uploaded successfully!'
 
 def uploaSingleRecord(record):
+    print("Kafka: Uploading \ndestination topic : {}\ndata : {}".format(app.config['KAFKA_TOPIC'], record))
     app.config['KAFKA_PRODUCER'].send(app.config['KAFKA_TOPIC'] , value = record)
     return "reported a crime", 200
