@@ -1,6 +1,7 @@
 import os
 from datetime import datetime
 from flask import current_app as app
+import uuid
 
 
 def remove_file(filename):
@@ -11,8 +12,10 @@ def reportCrime(record):
     #Flatten dict
     record = {k:v[0] for k,v in record.items()}
 
-    record['Date'] = datetime.now().strftime('%m/%d/%Y %I:%M:%S %p')
-    record['Case_ID'] = str(record['City'])+str(record['Date'])
+    record['Date'] = datetime.now().strftime('%m/%d/%Y')
+    record['Case_Id'] = str(uuid.uuid4().int & (1<<64)-1)
+    #uuid.uuid4().__str__()
+    record['Zipcode'] = '60601'
     return uploaSingleRecord(record)
 
 def uploadCrimeRecord(filename):
@@ -30,4 +33,4 @@ def uploadCrimeRecord(filename):
 def uploaSingleRecord(record):
     print("Kafka: Uploading \ndestination topic : {}\ndata : {}".format(app.config['KAFKA_TOPIC'], record))
     app.config['KAFKA_PRODUCER'].send(app.config['KAFKA_TOPIC'] , value = record)
-    return "reported a crime", 200
+    return "Thanks for reporting. Case ID : " + record['Case_Id'], 200

@@ -1,8 +1,7 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f" crossorigin="anonymous"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
     crossorigin="anonymous"></script>
@@ -50,8 +49,9 @@ width:50%;
     </div>
 </br>
     <button name="submit-button" id="submit-button" type="button" class="btn btn-primary" onclick="getLocation()">Submit</button>
-    <iframe id="live-map" src="http://34.73.60.209:5601/app/kibana#/visualize/edit/9bd77760-5263-11e9-8392-9d770e73c5dd?embed=true&_g=()&_a=(filters:!(),linked:!f,query:(language:lucene,query:''),uiState:(mapCenter:!(41.880297681402865,-87.69081115722656),mapZoom:10),vis:(aggs:!((enabled:!t,id:'1',params:(),schema:metric,type:count),(enabled:!t,id:'2',params:(autoPrecision:!t,field:Location,isFilteredByCollar:!t,mapBounds:(bottom_right:(lat:44.96479793033104,lon:-65.8905029296875),top_left:(lat:47.58764167941513,lon:-70.9716796875)),mapCenter:(lat:46.29381556233369,lon:-68.43383789062501),mapZoom:8,precision:5,useGeocentroid:!t),schema:segment,type:geohash_grid)),params:(addTooltip:!t,colorSchema:'Yellow+to+Red',heatClusterSize:1.5,isDesaturated:!t,legendPosition:bottomright,mapCenter:!(0,0),mapType:'Scaled+Circle+Markers',mapZoom:2,wms:(enabled:!f,options:(format:image%2Fpng,transparent:!t),selectedTmsLayer:(attribution:'%3Cp%3E%26%23169;+%3Ca+href%3D%22http:%2F%2Fwww.openstreetmap.org%2Fcopyright%22%3EOpenStreetMap%3C%2Fa%3E+contributors+%7C+%3Ca+href%3D%22https:%2F%2Fwww.elastic.co%2Felastic-maps-service%22%3EElastic+Maps+Service%3C%2Fa%3E%3C%2Fp%3E%26%2310;',id:road_map,maxZoom:18,minZoom:0,origin:elastic_maps_service))),title:CrimesCountOnMap,type:tile_map))" height="600" width="800"></iframe>
-
+    <!-- <iframe id="live-map" src="http://34.73.60.209:5601/app/kibana#/visualize/edit/9bd77760-5263-11e9-8392-9d770e73c5dd?embed=true&_g=()&_a=(filters:!(),linked:!f,query:(language:lucene,query:''),uiState:(mapCenter:!(41.880297681402865,-87.69081115722656),mapZoom:10),vis:(aggs:!((enabled:!t,id:'1',params:(),schema:metric,type:count),(enabled:!t,id:'2',params:(autoPrecision:!t,field:Location,isFilteredByCollar:!t,mapBounds:(bottom_right:(lat:44.96479793033104,lon:-65.8905029296875),top_left:(lat:47.58764167941513,lon:-70.9716796875)),mapCenter:(lat:46.29381556233369,lon:-68.43383789062501),mapZoom:8,precision:5,useGeocentroid:!t),schema:segment,type:geohash_grid)),params:(addTooltip:!t,colorSchema:'Yellow+to+Red',heatClusterSize:1.5,isDesaturated:!t,legendPosition:bottomright,mapCenter:!(0,0),mapType:'Scaled+Circle+Markers',mapZoom:2,wms:(enabled:!f,options:(format:image%2Fpng,transparent:!t),selectedTmsLayer:(attribution:'%3Cp%3E%26%23169;+%3Ca+href%3D%22http:%2F%2Fwww.openstreetmap.org%2Fcopyright%22%3EOpenStreetMap%3C%2Fa%3E+contributors+%7C+%3Ca+href%3D%22https:%2F%2Fwww.elastic.co%2Felastic-maps-service%22%3EElastic+Maps+Service%3C%2Fa%3E%3C%2Fp%3E%26%2310;',id:road_map,maxZoom:18,minZoom:0,origin:elastic_maps_service))),title:CrimesCountOnMap,type:tile_map))" height="600" width="800"></iframe>
+     -->
+     <iframe id="live-map" src="http://34.73.60.209:5601/app/kibana#/visualize/create?embed=true&type=tile_map&indexPattern=8d57cde0-6a3a-11e9-9a78-7f3469db8d84&_g=(refreshInterval:(pause:!t,value:0),time:(from:now-24h,mode:quick,to:now))&_a=(filters:!(),linked:!f,query:(language:lucene,query:''),uiState:(mapCenter:!(43.64949133795468,-79.21691894531251),mapZoom:11),vis:(aggs:!((enabled:!t,id:'1',params:(),schema:metric,type:count),(enabled:!t,id:'2',params:(autoPrecision:!t,field:Geolocation,isFilteredByCollar:!t,mapBounds:(bottom_right:(lat:43.33616601403274,lon:-78.18832397460938),top_left:(lat:44.05699861738566,lon:-79.71267700195314)),mapCenter:(lat:43.69766549666678,lon:-78.95050048828126),mapZoom:10,precision:6,useGeocentroid:!t),schema:segment,type:geohash_grid)),params:(addTooltip:!t,colorSchema:'Yellow+to+Red',heatClusterSize:1.5,isDesaturated:!t,legendPosition:bottomright,mapCenter:!(0,0),mapType:'Scaled+Circle+Markers',mapZoom:2,wms:(enabled:!f,options:(format:image%2Fpng,transparent:!t),selectedTmsLayer:(attribution:'%3Cp%3E%26%23169;+%3Ca+href%3D%22http:%2F%2Fwww.openstreetmap.org%2Fcopyright%22%3EOpenStreetMap%3C%2Fa%3E+contributors+%7C+%3Ca+href%3D%22https:%2F%2Fopenmaptiles.org%2F%22%3EOpenMapTiles%3C%2Fa%3E+%7C+%3Ca+href%3D%22https:%2F%2Fwww.maptiler.com%2F%22%3EMapTiler%3C%2Fa%3E+%7C+%3Ca+href%3D%22https:%2F%2Fwww.elastic.co%2Felastic-maps-service%22%3EElastic+Maps+Service%3C%2Fa%3E%3C%2Fp%3E%26%2310;',id:road_map,maxZoom:18,minZoom:0,origin:elastic_maps_service))),title:'New+Visualization',type:tile_map))" height="600" width="800"></iframe>
 </form>
 
 <script>
@@ -68,6 +68,41 @@ function submitFormWithGeoLocation(position) {
   "," + position.coords.longitude);
   document.getElementById("geoloc").value = position.coords.latitude + 
   "," + position.coords.longitude;
-  document.getElementById("report-form").submit();
+//   document.getElementById("report-form").submit();
+$.ajax({
+                        method: 'POST',
+                        url: '/report',
+                        data : $('#report-form').serialize(),
+                        success: function(data){
+                            alert(data);
+                        },
+                        error: function(xhr, desc, err){
+                            console.log(err);
+                        }
+                    });
 }
 </script>
+
+<script>
+        $(document).ready(function(){
+    
+             $(function(){
+                $("#report-form").submit(function(event){
+                    event.preventDefault();
+                    $.ajax({
+                        method: 'POST',
+                        url: '/report',
+                        dataType: "json",
+                        contentType: "application/json",
+                        data : $('#report-form').serialize(),
+                        success: function(data){
+                            alert(data);
+                        },
+                        error: function(xhr, desc, err){
+                            console.log(err);
+                        }
+                    });
+                });
+            });
+        });
+        </script>
