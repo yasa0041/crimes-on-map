@@ -2,6 +2,7 @@ import os
 from datetime import datetime
 from flask import current_app as app
 import uuid
+import pandas as pd
 
 
 def remove_file(filename):

@@ -24,6 +24,7 @@ def getDataSchema(es_index):
     ind_client = elasticsearch.client.IndicesClient(es)
 
     fields = list(ind_client.get_mapping()[es_index]['mappings']['type']['properties'].keys())
+    fields.remove("Case_Id")
     print(es_index + " fields : " + str(fields))
     
     return fields
