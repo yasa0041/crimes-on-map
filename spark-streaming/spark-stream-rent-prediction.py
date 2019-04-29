@@ -19,14 +19,14 @@ def getSparkSessionInstance(sparkConf):
             .getOrCreate()
     return globals()['sparkSessionSingletonInstance']
 
-ssc = StreamingContext(sc, 20)
+ssc = StreamingContext(sc, 1)
 
 es_write_conf = {
         "es.nodes" : "elastic-2",
         "es.port" : "9200",
-        "es.resource" : 'combined_crimes_test/doc',
+        "es.resource" : 'combined_crimes_test/type',
         "es.input.json": "yes",
-        "es.input.id":"Case_ID"
+        "es.input.id":"Case_Id"
     }
 
 def predict_rent(x):
