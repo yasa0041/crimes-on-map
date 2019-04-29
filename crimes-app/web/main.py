@@ -62,3 +62,6 @@ def initialize(app):
 
 print("Initializing App")
 initialize(app)
+
+if __name__ == "__main__":
+    app.run(ssl_context='adhoc', debug = True)
