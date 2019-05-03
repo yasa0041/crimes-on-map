@@ -1,6 +1,10 @@
 # crimes-on-map
 Michael Chifala, Yash Sapra, Kamal Chaturverdi
+
 University of Colorado, Boulder
+
+Dr. Lv.
+
 CSCI 7000-003, Spring 2019
 
 # Public API: 
