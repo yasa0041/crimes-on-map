@@ -1,4 +1,9 @@
-# crimes-on-map Public API: 
+# crimes-on-map
+Michael Chifala, Yash Sapra, Kamal Chaturverdi
+University of Colorado, Boulder
+CSCI 7000-003, Spring 2019
+
+#Public API: 
 Hosted url: http://theta-anchor-215617.appspot.com/map/chicago
 
 To deploy the app:
