@@ -17,7 +17,7 @@ Hosted url: http://34.73.60.209:5601/goto/897fbd197445f03d50419fc10287168a
 
 # Elasticsearch "combined-crimes" Index:
 
-Hosted url: http://34.73.60.209:5601/goto/c88a4b9daa79677d6bbb902677e42080
+Hosted url: http://34.73.60.209:5601/goto/4494939ca907d24022495df14e5088ab
 
 # Descriptions of Python Notebooks:
 
