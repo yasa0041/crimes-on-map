@@ -3,7 +3,7 @@ Michael Chifala, Yash Sapra, Kamal Chaturverdi
 University of Colorado, Boulder
 CSCI 7000-003, Spring 2019
 
-#Public API: 
+# Public API: 
 Hosted url: http://theta-anchor-215617.appspot.com/map/chicago
 
 To deploy the app:
@@ -24,7 +24,7 @@ Hosted url: http://34.73.60.209:5601/goto/897fbd197445f03d50419fc10287168a
 
 Hosted url: http://34.73.60.209:5601/goto/4494939ca907d24022495df14e5088ab
 
-# Descriptions of Python Notebooks:
+# Descriptions of Python Notebooks and .CSV files:
 
 1) API_Stress_Test.ipynb: Uploads a .csv of 1M records to the API bulk upload endpoint with the goal of stressing the system
 
@@ -49,3 +49,5 @@ Hosted url: http://34.73.60.209:5601/goto/4494939ca907d24022495df14e5088ab
 11) calculateCrimeScore.ipynb: From the .csv outputted by addCrimeScoreAsTimeSeries.ipynb, calculate crime score, and save it to all records in the input file. Output is the file with crime score appended to it. 
 
 12) linear_regression_spark.ipynb: Attempted implementation of linear regression on the input crime/rental data
+
+13) Spark_DataFrame.csv: Output of the rental price and neighborhood crime score predictions for April 2019. For use in Spark
