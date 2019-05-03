@@ -13,7 +13,7 @@ gcloud app deploy
 
 # Kibana Dashboard:
 
-Hosted url: http://34.73.60.209:5601/goto/8686eb5d7c8ed31f4e0252b9c29972df
+Hosted url: http://34.73.60.209:5601/goto/897fbd197445f03d50419fc10287168a
 
 # Elasticsearch "combined-crimes" Index:
 
@@ -39,8 +39,8 @@ Hosted url: http://34.73.60.209:5601/goto/c88a4b9daa79677d6bbb902677e42080
 
 9) sample_upload_good.csv:  Sample .csv to test the data field matching when uploading to Kafka topic
 
-10) addCrimeScoreAsTimeSeries.ipynb: 
+10) addCrimeScoreAsTimeSeries.ipynb: Read the input file (all collected data), group & filter it, & save back as a .csv
 
-11) calculateCrimeScore.ipynb: 
+11) calculateCrimeScore.ipynb: From the .csv outputted by addCrimeScoreAsTimeSeries.ipynb, calculate crime score, and save it to all records in the input file. Output is the file with crime score appended to it. 
 
-12) linear_regression_spark.ipynb
+12) linear_regression_spark.ipynb: Attempted implementation of linear regression on the input crime/rental data
