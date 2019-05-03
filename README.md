@@ -3,9 +3,9 @@ Michael Chifala, Yash Sapra, Kamal Chaturverdi
 
 University of Colorado, Boulder
 
-Dr. Lv.
 
-CSCI 7000-003, Spring 2019
+
+CSCI 7000-003; Dr. Lv.;  Spring 2019
 
 # Public API: 
 Hosted url: http://theta-anchor-215617.appspot.com/map/chicago
