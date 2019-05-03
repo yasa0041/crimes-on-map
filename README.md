@@ -1,4 +1,4 @@
-# crimes-on-map
+# Crime Patrol Redesigned
 Michael Chifala, Yash Sapra, Kamal Chaturverdi
 
 University of Colorado, Boulder
