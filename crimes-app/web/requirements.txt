@@ -1,2 +1,5 @@
 flask==1.0.2
-
+elasticsearch
+kafka-python
+pandas
+pyopenssl
